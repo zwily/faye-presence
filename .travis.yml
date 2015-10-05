@@ -12,4 +12,5 @@ before_script:
   - npm install
 
 script:
+  - sudo service docker restart ; sleep 10
   - docker-compose run node npm test
