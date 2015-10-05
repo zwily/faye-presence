@@ -19,7 +19,7 @@ exports.setup = function(server, client, options) {
         return callback(message);
       }
 
-      var data = message.ext.presence.data;
+      var data = message.ext.presence;
       if (data) {
         data = JSON.stringify(data);
       }
@@ -40,7 +40,7 @@ exports.setup = function(server, client, options) {
             var publish = {
               subscribe: {}
             };
-            publish.subscribe[message.ext.presence.id] = message.ext.presence.data;
+            publish.subscribe[message.ext.presence.id] = message.ext.presence;
 
             client.publish(message.subscription, publish);
           }
