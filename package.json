@@ -1,0 +1,20 @@
+{
+  "name": "faye-presence",
+  "version": "0.0.1",
+  "description": "Support for presence channels in Faye",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --require should --ui bdd $(find test -name \"*.spec.js\")"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.1.0",
+    "shard-manager": "^1.0.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.0"
+  }
+}

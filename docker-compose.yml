@@ -1,0 +1,13 @@
+redis:
+  image: redis:latest
+  ports:
+    - "6379"
+  command: redis-server --save ""
+
+node:
+  image: node:4
+  links:
+    - redis
+  volumes:
+    - "./:/app"
+  working_dir: "/app"
