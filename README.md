@@ -1,4 +1,4 @@
-# Presence Channels
+# Faye Presence [![Build Status](https://travis-ci.org/zwily/faye-presence.svg?branch=master)](https://travis-ci.org/zwily/faye-presence)
 
 Presence channels are an addition to Faye implemented via an extension and
 monitoring Faye events.
