@@ -87,3 +87,9 @@ The presence id is used instead of the internal Faye client id because it can
 more accurately identify an entity, where the Faye client id identifies a connection.
 A user can be subscribed concurrently on several browsers, and will not show as
 unsubscribed until all connections are closed.
+
+## Running tests:
+
+Using docker-compose:
+
+```docker-compose run node npm test```
