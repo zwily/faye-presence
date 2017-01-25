@@ -10,6 +10,7 @@ exports.setup = function(server, client, options) {
   server.addExtension({
     incoming: function(message, callback) {
       if (message.channel !== '/meta/subscribe' ||
+          message.error ||
           !message.subscription.match(self.channelRe)) {
         return callback(message);
       }
@@ -52,6 +53,7 @@ exports.setup = function(server, client, options) {
 
     outgoing: function(message, callback) {
       if (message.channel !== '/meta/subscribe' ||
+          message.error ||
           !message.subscription.match(self.channelRe)) {
         return callback(message);
       }
