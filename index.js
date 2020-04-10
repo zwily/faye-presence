@@ -4,7 +4,9 @@ var _ = require('underscore');
 exports.setup = function(server, client, options) {
   var self = this;
 
-  self.engine = options.engine || RedisEngine.create(options.servers);
+  self.engine = options.engine || RedisEngine.create(server, options.servers, {
+    logger: options.logger || function() {},
+  });
   self.channelRe = options.channelRe || /^\/presence\//;
 
   server.addExtension({
